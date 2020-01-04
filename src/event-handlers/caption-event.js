@@ -1,0 +1,1 @@
+// handle caption-related events
