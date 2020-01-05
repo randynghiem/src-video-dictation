@@ -1,0 +1,32 @@
+.caption-viewer {
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 1px solid #eee;
+}
+
+.caption-item {
+  padding-top: 10px;
+  border: 0px solid white;
+}
+
+.caption-item:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.caption-item.current {
+  background-color: #ddd;
+}
+
+.caption-item span{
+  display: inline-block;
+}
+
+.caption-item .caption-item-time {
+  width: 4rem;
+}
+
+.app-caption {
+  width: 720px;
+}

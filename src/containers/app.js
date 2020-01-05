@@ -1,21 +1,21 @@
+import './app.css';
 import React from 'react';
-import YTPlayer from '../components/youtube-player';
+import SearchToolbar from '../components/search-toolbar';
+import CaptionViewer from '../components/caption-viewer';
+import PlayerController from "./player-controller";
 
 function App() {
-
-  const playing = (event) => {
-    const player = event.target;
-    let currentTime = player.getCurrentTime();
-    console.log("current time: " + currentTime);
-  }
-
   return (
-    <div>
-      <YTPlayer
-        video="PknJ2hDouuU"
-        autoplay="0"
-        onProgressing={playing}
-      />
+    <div className="container">
+      <div className="app-toolbar mb-3 mt-3">
+        <SearchToolbar />
+      </div>
+      <div className="app-player mb-3">
+        <PlayerController />
+      </div>
+      <div className="app-caption">
+        <CaptionViewer />
+      </div>
     </div>
   );
 }

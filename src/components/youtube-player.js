@@ -48,7 +48,7 @@ class YouTubePlayer extends React.Component {
     const State = window.YT.PlayerState;
 
     if (event.data === State.PLAYING) {
-      this.intervalMarker = setInterval(() => { onProgressing(event) }, pingInterval);
+      this.intervalMarker = setInterval(() => { onProgressing != null && onProgressing(event.target.getCurrentTime()) }, pingInterval);
     } else {
       clearInterval(this.intervalMarker);
     }
@@ -240,7 +240,7 @@ YouTubePlayer.defaultProps = {
   onPlaying: () => { },
   onPause: () => { },
   onEnd: () => { },
-  onProgressing: () => { }
+  onProgressing: null
 };
 
 export default YouTubePlayer;
